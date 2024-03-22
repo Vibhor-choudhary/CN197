@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>event management</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url(op.jpg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+        }
+        
+        section{
+            position: relative;
+            max-width: 400px;
+            background-color:transparent;
+            border: 2px solid rgba(255, 255, 255, 0.5 green, blue, alpha);
+            border-radius: 20px;
+            backdrop-filter: blur(55px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem 3rem;  
+            box-shadow: rgba(0, 0, 0, 0.388);
+            text-align: center;
+        }
+        h1{
+            font-size: 50px;
+            color: aqua#fff;
+            text-align: center;
+            color: #fff;
+        }
+        .forget {
+            
+            margin: 35px 0;
+            font-size: 15px;
+            color: #fff;
+            display: flex;
+            justify-content: space-between;
+        }
+        button{
+            background-color:rgb(231, 159, 242);
+            color: #fff;
+            padding: 20px 25px;
+            margin-right: 200px;
+            margin-left: 180px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            ;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: rgb(137, 196, 238);
+        }
+        .mail{
+            margin-right:72px;
+        }
+        .pass{
+            margin-right: 25px;
+        }
+        .me{
+            margin-right:190px;
+        }
+
+        .inputbox{
+            margin-right: 180px;
+            font-size:30px;
+            color: #fff;
+            font:italic;
+            
+        }
+        .inputbox1{
+            margin-right:180px;
+            font-size:30px;
+            color: #fff;
+            font: italic;
+        }
+        .ok{
+            color: black;
+            margin: 10px;
+        }
+        
+
+
+    </style>
+</head>
+
+    <body>
+        <section>
+            <form method="get" action="html-code.html" >
+                <h1>Login</h1>
+                <div class="inputbox1">
+                    <label class="mail" for="email">Email</label><br>
+                    <input type="email"required placeholder="Enter your Email">
+                    
+                    <ion-icon name="mail-outline"></ion-icon>
+                    
+                </div>
+                <div class="inputbox">
+                    <ion-icon name="lock-closed-outline"></ion-icon>
+                    <label class="pass" for="">Password</label><br>
+                    <input type="password"  required placeholder="Enter your Password" minlength="8"><br>
+                </div>
+                <div>
+                    <label class="me" for=""><input type="checkbox">Remember me</label>
+                    <a href="a">Forget Password ?</a><br>
+
+                </div>
+                <div class="forget">
+                    
+                    <button type="submit">Next</button>
+                </div>             
+                
+            </form>
+        </section>
+    </body>
+</html>
