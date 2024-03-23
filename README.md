@@ -1,5 +1,5 @@
 # CN197
-It is an event management website project . created for a hackathon (round - 1).
+It is an event management website project . created for a Hackathon .
 Event Management System-
 Welcome to the Event Management System repository!
 
@@ -15,3 +15,5 @@ Event creation
 Participant registration and management
 Venue booking and management
 Schedule management
+
+Till Now, We have created our services page and Event Booking Page after logining into the interface.
