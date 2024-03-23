@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Budget Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4c4faf;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #8e45a0;
+        }
+
+        #budgetDisplay {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Wedding Budget Tracker</h1>
+        <input type="text" id="budgetName" placeholder="Product Name">
+        <input type="number" id="budgetAmount" placeholder="Product Amount">
+        <button onclick="addBudget()">Add Budget</button>
+
+        <h2 id="budgetDisplay">Total Budget: ₹0</h2>
+
+        <script>
+            let totalBudget = 0;
+
+            function addBudget() {
+                const budgetName = document.getElementById('budgetName').value;
+                const budgetAmount = parseFloat(document.getElementById('budgetAmount').value);
+
+                if (!budgetName || !budgetAmount) {
+                    alert('You should add both name and amount to get total budget.');
+                    return;
+                }
+
+                totalBudget += budgetAmount;
+                document.getElementById('budgetDisplay').innerText = `Total Budget: ₹${totalBudget.toFixed(2)}`;
+
+                document.getElementById('budgetName').value = '';
+                document.getElementById('budgetAmount').value = '';
+            }
+        </script>
+    </div>
+</body>
+</html>
